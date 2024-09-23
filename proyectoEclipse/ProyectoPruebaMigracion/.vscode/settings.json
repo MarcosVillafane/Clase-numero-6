@@ -1,0 +1,47 @@
+{
+    "files.encoding": "utf8",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.format.settings.url": ".vscode/eclipse-java-google-style.xml",
+    "java.format.settings.profile": "GoogleStyle",
+    "java.codeGeneration.hashCodeEquals.useInstanceof": true,
+    "java.codeGeneration.toString.template": "${object.className}{${member.name()}=${member.value}, ${otherMembers}}",
+    "java.codeGeneration.useBlocks": true,
+    "java.codeGeneration.generateComments": true,
+    "java.codeGeneration.insertLocation": "lastMember",
+    "java.completion.favoriteStaticMembers": [
+        "org.junit.Assert.*",
+        "org.junit.Assume.*",
+        "org.junit.jupiter.api.Assertions.*",
+        "org.junit.jupiter.api.Assumptions.*",
+        "org.junit.jupiter.api.DynamicContainer.*",
+        "org.junit.jupiter.api.DynamicTest.*"
+    ],
+    "java.completion.importOrder": [
+        "java",
+        "javax",
+        "org",
+        "com"
+    ],
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-22",
+            "path": "/path/to/jdk-22"
+        }
+    ],
+    "java.errors.incompleteClasspath.severity": "warning",
+    "java.jdt.ls.java.home": "/path/to/jdk-22",
+    "java.import.gradle.enabled": true,
+    "java.import.maven.enabled": true,
+    "java.referencesCodeLens.enabled": true,
+    "java.signatureHelp.enabled": true,
+    "java.sources.organizeImports.starThreshold": 99,
+    "java.sources.organizeImports.staticStarThreshold": 99,
+    "java.trace.server": "verbose",
+    "java.import.generatesMetadataFilesAtProjectRoot": false,
+    "files.exclude": {
+        "**/.project": true,
+        "**/.classpath": true,
+        "**/.settings": true
+    }
+}
