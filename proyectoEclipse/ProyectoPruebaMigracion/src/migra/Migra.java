@@ -1,4 +1,4 @@
-package proyectoEclipse.ProyectoPruebaMigracion.src.migra;
+package migra;
 
 public class Migra {
 
