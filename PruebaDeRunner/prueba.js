@@ -10,4 +10,4 @@ function generatePassword(length) {
 
 const passwordLength = 12; // Puedes cambiar la longitud de la contraseña aquí
 const newPassword = generatePassword(passwordLength);
-console.log("Generated Password: " + newPassword);
+console.log("Generated Password:  " + newPassword);
