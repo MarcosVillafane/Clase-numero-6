@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Zapatos</title>
+    <style>
+        /* Estilos básicos para la galería de zapatos */
+        .shoe-gallery {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .shoe-item {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        .shoe-item img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tienda de Zapatos</h1>
+    <div class="shoe-gallery" id="shoeGallery"></div>
+    <button onclick="checkout()">Proceder a la Compra</button>
+
+    <script>
+        // Ejemplo de datos de zapatos
+        const shoes = [
+            { id: 1, name: 'Zapato 1', price: 50, image: 'zapato1.jpg' },
+            { id: 2, name: 'Zapato 2', price: 60, image: 'zapato2.jpg' },
+            // Agregar más zapatos aquí
+        ];
+
+        // Renderizar la galería de zapatos
+        const shoeGallery = document.getElementById('shoeGallery');
+        shoes.forEach(shoe => {
+            const shoeItem = document.createElement('div');
+            shoeItem.className = 'shoe-item';
+            shoeItem.innerHTML = `
+                <img src="${shoe.image}" alt="${shoe.name}">
+                <h2>${shoe.name}</h2>
+                <p>Precio: $${shoe.price}</p>
+                <button onclick="addToCart(${shoe.id})">Agregar al Carrito</button>
+            `;
+            shoeGallery.appendChild(shoeItem);
+        });
+
+        // Función para agregar al carrito
+        const cart = [];
+        function addToCart(shoeId) {
+            const shoe = shoes.find(s => s.id === shoeId);
+            cart.push(shoe);
+            alert(`${shoe.name} agregado al carrito`);
+        }
+
+        // Función para proceder a la compra
+        function checkout() {
+            if (cart.length === 0) {
+                alert('El carrito está vacío');
+                return;
+            }
+            // Aquí se puede enviar el carrito al servidor para procesar la compra
+            console.log('Carrito:', cart);
+            alert('Compra realizada con éxito');
+        }
+    </script>
+</body>
+</html>
